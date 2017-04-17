@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SM_Suite" verbose="1">
+    <test name="SM">
+        <parameter name="platform" value="windows"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value=""/>
+        <classes>
+            <class name="com.independent.automation.sm.tests.Login"/>
+        </classes>
+    </test>
+</suite>

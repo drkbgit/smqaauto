@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
 
+
 /**
  * Created by ctl-user on 05-03-2017.
  */
@@ -18,7 +19,6 @@ public class BaseTest {
     @BeforeClass
     public void setUp(){
         basePage = new BasePage();
-
     }
 
     @AfterClass

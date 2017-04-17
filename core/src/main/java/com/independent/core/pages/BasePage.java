@@ -1,5 +1,6 @@
 package com.independent.core.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -92,4 +93,28 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver,time);
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+    public void setText(WebElement element, String text){
+        element.clear();
+        element.sendKeys(text);
+    }
+
+    public void getText(WebElement element){
+        element.getText();
+    }
+
+    public boolean isElementVisible(WebElement element){
+        boolean isVisible = false;
+        try{
+            WebDriverWait wait = new WebDriverWait(driver,20);
+            wait.until(ExpectedConditions.visibilityOf(element));
+            if(element.isDisplayed())
+                isVisible = true;
+        }catch(Exception e){
+            isVisible = false;
+        }
+        return isVisible;
+    }
+
+
 }

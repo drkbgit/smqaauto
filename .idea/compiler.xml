@@ -12,6 +12,7 @@
     <bytecodeTargetLevel>
       <module name="core" target="1.5" />
       <module name="mms" target="1.8" />
+      <module name="sm" target="1.8" />
       <module name="timber" target="1.5" />
     </bytecodeTargetLevel>
   </component>
