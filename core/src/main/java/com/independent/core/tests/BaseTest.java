@@ -18,7 +18,7 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp(){
-        basePage = new BasePage();
+
     }
 
     @AfterClass

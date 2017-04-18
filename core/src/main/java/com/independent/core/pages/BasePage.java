@@ -1,9 +1,6 @@
 package com.independent.core.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,10 +21,7 @@ public class BasePage {
 
     public void navigateToURL(String url){
         driver.get(url);
-    }
-
-    public void waitForPageLoad(){
-
+       sleepTime(5000);
     }
 
     public String getCurrentUrl(){
@@ -114,6 +108,10 @@ public class BasePage {
             isVisible = false;
         }
         return isVisible;
+    }
+
+    public void waitForPageLoad(){
+        JavascriptExecutor JSExecutor =  (JavascriptExecutor) driver;
     }
 
 

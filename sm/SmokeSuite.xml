@@ -6,7 +6,8 @@
         <parameter name="browserName" value="chrome"/>
         <parameter name="browserVersion" value=""/>
         <classes>
-            <class name="com.independent.automation.sm.tests.Login"/>
+            <class name="com.independent.automation.sm.tests.LoginTests"/>
+            <class name="com.independent.automation.sm.tests.TrainingTests"/>
         </classes>
     </test>
 </suite>

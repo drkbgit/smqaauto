@@ -16,7 +16,7 @@ import org.testng.asserts.Assertion;
 public class smBaseTest extends BaseTest {
 
     WebDriver driver;
-    LoginPage  loginPage;
+    LoginPage loginPage;
     HomePage homePage;
     TrainingPage trainingPage;
 
@@ -29,9 +29,9 @@ public class smBaseTest extends BaseTest {
         trainingPage = new TrainingPage(driver);
     }
 
-    @AfterClass
+    @AfterMethod
     public void tearDown(){
-
+        driver.quit();
     }
 
 }

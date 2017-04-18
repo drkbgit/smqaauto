@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by ctl-user on 17-04-2017.
@@ -26,14 +27,16 @@ public class LoginPage extends BasePage{
 
     public LoginPage(WebDriver driver){
         super(driver);
+        PageFactory.initElements(driver,this);
     }
 
     public void loginAsUser(String username,String password){
-        setText(txtusername,username);
-        setText(txtpassword,password);
-        click(chkRememberMe);
-        click(btnSubmit);
+        txtusername.sendKeys(username);
+        txtpassword.sendKeys(password);
+        chkRememberMe.click();
+        btnSubmit.click();
     }
+
 
     public boolean isLoginSectionDisplayed(){
         boolean isVisible = false;
